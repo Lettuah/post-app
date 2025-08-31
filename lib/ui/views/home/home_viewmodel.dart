@@ -1,9 +1,10 @@
+import 'package:new_stacked/app/locator.dart';
 import 'package:new_stacked/models/post_model.dart';
 import 'package:new_stacked/services/post_service.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeViewmodel extends BaseViewModel {
-  final PostService _postService = PostService();
+  final PostService _postService = locator<PostService>();
 
   List<Post> _posts = [];
   List<Post> get posts => _posts;
