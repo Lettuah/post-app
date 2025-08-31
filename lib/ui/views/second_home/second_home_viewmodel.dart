@@ -14,6 +14,7 @@ class SecondHomeViewmodel extends BaseViewModel {
   int _page = 0;
   final int _limit = 10;
   bool _hasMore = true;
+  bool get hasMore => _hasMore;
   bool _isFetchingMore = false;
 
   Future<void> loadPosts({bool refresh = false}) async {

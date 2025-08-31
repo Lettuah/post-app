@@ -28,20 +28,37 @@ class HomeView extends StatelessWidget {
                   ),
                 )
               : SafeArea(
-                  child: RefreshIndicator(
-                    onRefresh: () async {
-                      await model.loadPosts();
-                    },
-                    child: ListView.builder(
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      itemCount: model.posts.length,
-                      itemBuilder: (context, index) {
-                        final post = model.posts[index];
-                        return ListTile(
-                          title: Text(post.title),
-                          subtitle: Text(post.body),
-                        );
+                  child: Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: RefreshIndicator(
+                      onRefresh: () async {
+                        await model.loadPosts();
                       },
+                      child: ListView.builder(
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        itemCount: model.posts.length,
+                        itemBuilder: (context, index) {
+                          final post = model.posts[index];
+                          return Container(
+                            padding: const EdgeInsets.all(5),
+                            margin: const EdgeInsets.only(bottom: 10),
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 208, 209, 209),
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: ListTile(
+                              title: Text(
+                                '${post.title} - ${post.id}',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.4,
+                                ),
+                              ),
+                              subtitle: Text(post.body),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
