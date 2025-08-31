@@ -246,6 +246,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_hooks:
+    dependency: transitive
+    description:
+      name: flutter_hooks
+      sha256: cde36b12f7188c85286fba9b38cc5a902e7279f36dd676967106c041dc9dde70
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.20.5"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -259,6 +267,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  freezed_annotation:
+    dependency: transitive
+    description:
+      name: freezed_annotation
+      sha256: "7294967ff0a6d98638e7acb774aac3af2550777accd8149c90af5b014e6d44d8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -268,7 +284,7 @@ packages:
     source: hosted
     version: "4.0.0"
   get:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: get
       sha256: c79eeb4339f1f3deffd9ec912f8a923834bec55f7b49c9e882b8fef2c139d425
@@ -411,6 +427,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.0"
+  logger:
+    dependency: transitive
+    description:
+      name: logger
+      sha256: "55d6c23a6c15db14920e037fe7e0dc32e7cdaf3b64b4b25df2d541b5b6b81c0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
   logging:
     dependency: transitive
     description:
@@ -608,6 +632,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.5.0"
+  stacked_generator:
+    dependency: "direct dev"
+    description:
+      name: stacked_generator
+      sha256: "345e5eaa7ce58eb03402c33c57a0532da60264fe14f423e6e1de7c68ea4e9d94"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
+  stacked_hooks:
+    dependency: "direct main"
+    description:
+      name: stacked_hooks
+      sha256: ba2b0d777c69d4d38e5c08edbacc4dfe68eac94672447d067c2edc86fff9ed25
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.4"
   stacked_services:
     dependency: "direct main"
     description:
@@ -760,6 +800,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
+  xdg_directories:
+    dependency: transitive
+    description:
+      name: xdg_directories
+      sha256: "7a3f37b05d989967cdddcbb571f1ea834867ae2faa29725fd085180e0883aa15"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   xxh3:
     dependency: transitive
     description:

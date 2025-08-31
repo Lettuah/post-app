@@ -7,7 +7,7 @@ class PostService {
 
   Future<List<Post>> fetchPosts() async {
     final response = await http.get(
-      Uri.parse("$baseUrl/postsb"),
+      Uri.parse("$baseUrl/posts"),
       headers: {"Accept": "application/json"},
     );
 

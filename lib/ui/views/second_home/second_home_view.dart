@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:new_stacked/ui/views/second_home/second_home_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
+@RoutePage()
 class SecondHomeView extends StatelessWidget {
   const SecondHomeView({super.key});
 

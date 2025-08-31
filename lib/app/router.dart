@@ -1,19 +1,11 @@
-import 'package:auto_route/auto_route.dart';
-import 'router.gr.dart' as r;
+import 'package:new_stacked/ui/views/home/home_view.dart';
+import 'package:new_stacked/ui/views/startup/startup_view.dart';
+import 'package:stacked/stacked_annotations.dart';
 
-@AutoRouterConfig(replaceInRouteName: 'View,Route')
-class AppRouter extends RootStackRouter {
-  @override
-  RouteType get defaultRouteType => RouteType.material();
-
-  @override
-  List<AutoRoute> get routes => [
-    AutoRoute(page: r.StartupRoute.page, initial: true),
-    AutoRoute(page: r.HomeRoute.page),
-  ];
-
-  @override
-  List<AutoRouteGuard> get guards => [
-    // optionally add root guards here
-  ];
-}
+@StackedApp(
+  routes: [
+    MaterialRoute(page: StartupView, initial: true),
+    MaterialRoute(page: HomeView),
+  ],
+)
+class App {}

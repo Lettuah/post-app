@@ -1,22 +1,29 @@
+// main.dart
 import 'package:flutter/material.dart';
-import 'package:new_stacked/app/router.dart';
+import 'package:new_stacked/app/locator.dart';
+import 'package:new_stacked/ui/views/startup/startup_view.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 void main() {
+  setupLocator();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Flutter Demo',
+    return MaterialApp(
+      title: "Post App",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: 'inter',
+        // primarySwatch: createMaterialColor(Palette.yellowPrimary), // Uncomment if needed
       ),
-      routerConfig: AppRouter().config(),
+      navigatorKey: locator<NavigationService>().navigatorKey,
+      // onGenerateRoute: StackedRouter().onGenerateRoute,
+      home: StartupView(),
     );
   }
 }

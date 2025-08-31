@@ -16,7 +16,26 @@ class StartupView extends StatelessWidget {
           body: Center(
             child: Padding(
               padding: const EdgeInsets.all(24),
-              child: Text('Welcome to STARTUP Page'),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Welcome to STARTUP Page'),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                        onPressed: model.goInfinite,
+                        child: Text('Infinite Scroll'),
+                      ),
+                      ElevatedButton(
+                        onPressed: model.goNormal,
+                        child: Text('Finite Scroll'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         );
