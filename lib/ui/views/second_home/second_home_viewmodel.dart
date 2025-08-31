@@ -6,8 +6,8 @@ import 'package:stacked/stacked.dart';
 class SecondHomeViewmodel extends BaseViewModel {
   final SecondPostService _postService = locator<SecondPostService>();
 
-  final List<Post> _posts = [];
-  List<Post> get posts => _posts;
+  final List<PostModel> _posts = [];
+  List<PostModel> get posts => _posts;
 
   String _errorMessage = '';
   String get errorMessage => _errorMessage;

@@ -17,12 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Post App",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'inter',
-        // primarySwatch: createMaterialColor(Palette.yellowPrimary), // Uncomment if needed
-      ),
+      theme: ThemeData(fontFamily: 'inter'),
       navigatorKey: locator<NavigationService>().navigatorKey,
-      // onGenerateRoute: StackedRouter().onGenerateRoute,
       home: StartupView(),
     );
   }
